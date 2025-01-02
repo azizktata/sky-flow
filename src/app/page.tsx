@@ -1,17 +1,15 @@
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ui/contactForm";
 import HomeCarousel from "@/components/ui/homeCarousel";
-import { Card, CardBody, CardFooter } from "@nextui-org/card";
+import { Card, CardBody } from "@nextui-org/card";
 import {
   ArrowDownUpIcon,
   Container,
   Folder,
   Globe2Icon,
-  Info,
   Mail,
   MapPin,
   Phone,
-  SearchCheckIcon,
   Ship,
   Trophy,
   User,
@@ -28,25 +26,27 @@ export default function Home() {
       </section>
       <section id="about" className="w-[90%] m-auto my-16">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-          <div className="flex flex-col items-start w-full sm:w-2/3  md:w-1/2 xl:pr-32">
+          <div className="flex flex-col items-start w-full   md:w-1/2 xl:pr-32">
             <h4 className="text-lg">
               <span className="text-[#02446E]">Sky</span>
               <span className="text-[#C570B8]"> Flow</span>
             </h4>
-            <h1 className="text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#02446E] to-[#C570B8] mb-4">
-              Connecting the World Through Trade
+            <h1 className="text-4xl sm:text-5xl max-w-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#02446E] to-[#C570B8] mb-4">
+              Ouvrir des portes aux opportunités mondiales
             </h1>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Unlock new opportunities with our reliable import and export
-              solutions. From logistics and compliance to seamless international
-              shipping, we connect businesses across borders to help you thrive
-              in a competitive global market
+            <p className="text-lg text-gray-700 max-w-lg xl:max-w-xl leading-relaxed">
+              Skyflow est une entreprise dynamique spécialisée dans
+              l&apos;importation et l&apos;exportation de produits et services
+              divers à l’échelle mondiale. Fondée avec l’objectif de connecter
+              les marchés internationaux. Notre société offre une solution
+              complète pour répondre aux besoins de nos clients et partenaires
+              commerciaux dans divers secteurs.
             </p>
             <Button
               variant={"outline"}
               className="mt-8 px-6 py-6 rounded-sm text-white font-normal text-base bg-[#0E305D] border-none"
             >
-              Contact us
+              Contactez-nous
             </Button>
           </div>
           <div className="relative h-[380px] w-full  md:w-1/2">
@@ -70,7 +70,7 @@ export default function Home() {
               src="/logistics.jpg"
               loading="eager"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-linear"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-linear"></div>
             {/* <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent"></div> */}
           </div>
           <CardBody className="absolute inset-0 mb-16  z-10 flex items-center justify-center">
@@ -81,33 +81,56 @@ export default function Home() {
                 width={240}
                 height={115}
               />
-              <h1 className="mb-4 max-w-xl font-semibold text-xl sm:text-3xl lg:text-4xl xl:text-6xl text-white text-center tracking-wider">
+              <h1 className="mb-4 max-w-3xl font-semibold text-3xl sm:text-3xl lg:text-4xl xl:text-5xl text-white text-center tracking-wider">
                 {" "}
-                <span className="text-[#004EB2]"> Import </span> &{" "}
-                <span className="text-[#C570B8]">Export</span> Solutions
+                Services d&apos;importation et d&apos;exportation à
+                l&apos;échelle mondiale.
               </h1>
-              <p className="text-base lg:text-lg text-center text-gray-100 font-normal mb-4 max-w-md tracking-widest">
-                your gateway way to global trade, offering imporiting &
-                exporting services your
+              <p className="text-lg text-white max-w-sm text-center leading-relaxed mb-8">
+                vous bénéficiez d’une solution clé en main pour vos besoins en
+                import et export
               </p>
+              {/* <div className="">
+                <ul className="flex  items-center justify-center gap-4 text-gray-300">
+                  <div className="flex items-start gap-2">
+                    <CheckCheck size={48} color="#C570B8" />
+                    <li className="flex flex-col max-w-xs">
+                      <span className="font-medium text-white text-lg">
+                        Produits alimentaires
+                      </span>{" "}
+                      Importation et exportation de produits frais, surgelés et
+                      transformés.
+                    </li>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCheck size={48} color="#C570B8" />
+                    <li className="flex flex-col max-w-xs">
+                      <span className="font-medium text-white text-lg">
+                        Produits spécifiques
+                      </span>{" "}
+                      Matières premières, produits chimiques, équipements
+                      médicaux, etc.
+                    </li>
+                  </div>
+                </ul>
+              </div> */}
             </div>
           </CardBody>
         </Card>
       </section>
 
-      <section className="w-[90%] lg:w-[80%] m-auto mb-16">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-4">
-          <div className="w-full sm:w-2/3 md:w-1/2 xl:pr-24 mb-8 md:mb-0">
+      <section className="w-[90%]  m-auto mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8 ">
+          {/* <div className="w-full sm:w-2/3 md:w-1/2 xl:pr-24 mb-8 md:mb-0">
             <h4 className="text-lg font-light text-[#C570B8]">Global</h4>
             <h1 className="text-5xl tracking-wider font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#02446E] to-[#C570B8] mb-4">
               We offer global trading chain
             </h1>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              We offer a wide range of services to help you navigate the
-              complexities of global trade. From customs brokerage and
-              compliance to freight forwarding and logistics, we provide
-              end-to-end solutions to help you grow your business and expand
-              your reach.
+              Avec Sky flow, vous bénéficiez d’une solution clé en main pour vos
+              besoins en import et export. Notre ambition est de bâtir un pont
+              entre les marchés, favorisant la croissance et le succès de nos
+              clients à travers le monde.
             </p>
             <div className="flex flex-col items-start w-full  gap-2">
               <div className="flex items-center gap-2">
@@ -132,7 +155,7 @@ export default function Home() {
             >
               <a href="#services">Explore our services</a>
             </Button>
-          </div>
+          </div> */}
           <div className="w-full md:w-1/2 flex gap-4">
             <div className="flex flex-col gap-4 w-1/2 ">
               <div className="relative h-[250px] w-full">
@@ -171,10 +194,59 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="w-full   md:w-1/2 xl:pr-24 mb-8 md:mb-0 xl:mt-16">
+            <h4 className="text-lg font-light text-[#C570B8]">Services</h4>
+            <h1 className="text-4xl sm:text-5xl max-w-lg font-semibold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#02446E] to-[#C570B8] mb-4">
+              Nous opérons dans tous les domaines
+            </h1>
+            <p className="text-lg text-gray-700 leading-relaxed max-w-md mb-4">
+              vous bénéficiez d’une solution clé en main pour vos besoins en
+              import et export. Notre ambition est de bâtir un pont entre les
+              marchés, favorisant la croissance et le succès de nos clients à
+              travers le monde.
+            </p>
+            <div className="flex gap-2  flex-wrap  w-full ">
+              <div className="flex flex-col items-start gap-2 mt-4   ">
+                <Ship size={24} color="#C570B8" />
+                <div>
+                  <p className="text-[#0E305D] font-semibold text-base sm:text-lg">
+                    Produits alimentaires
+                  </p>
+                  <p className="text-gray-700 text-sm max-w-[30ch]">
+                    Importation et exportation de produits frais, surgelés et
+                    transformés.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col items-start gap-2 mt-4 ">
+                <ArrowDownUpIcon size={24} color="#C570B8" />
+                <div>
+                  <p className="text-[#0E305D] font-semibold text-base sm:text-lg">
+                    Produits spécifiques
+                  </p>
+                  <p className="text-gray-700 text-sm max-w-[30ch]">
+                    Matières premières, produits chimiques, équipements
+                    médicaux, etc.
+                  </p>
+                </div>
+              </div>
+              {/* <div className="flex flex-col items-start gap-2 mt-4 max-w-[260px] xl:max-w-[200px]">
+                <SearchCheckIcon size={24} color="#C570B8" />
+                <div>
+                  <p className="text-[#0E305D] font-semibold text-base sm:text-lg">
+                    Product sourcing
+                  </p>
+                  <p className="text-gray-700 max-w-sm">
+                    We offer a wide range of services
+                  </p>
+                </div>
+              </div> */}
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="w-full mb-16">
+      {/* <section className="w-full mb-16">
         <Card radius="none" className="h-[350px] ">
           <div className="relative w-full h-full overflow-hidden bg-gray-100">
             <Image
@@ -184,8 +256,6 @@ export default function Home() {
               src="/workers.jpg"
               loading="eager"
             />
-
-            {/* <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent"></div> */}
           </div>
           <CardBody className="absolute inset-0 mb-16  z-10 flex items-center justify-center">
             <div className="mt-12  flex flex-col items-center w-auto mb-6  ">
@@ -258,8 +328,8 @@ export default function Home() {
             </CardFooter>
           </Card>
         </div>
-      </section>
-      <section id="services" className="w-[90%] lg:w-[80%] m-auto my-16">
+      </section> */}
+      {/* <section id="services" className="w-[90%] lg:w-[80%] m-auto my-16">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           <div className="relative  self-stretch w-full md:w-1/2">
             <Image
@@ -271,34 +341,37 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-start w-full xl:w-2/3 ">
             <h4 className="text-lg font-light text-[#C570B8]">Services</h4>
-            <h1 className="text-5xl font-semibold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#02446E] to-[#C570B8] mb-4">
-              Connecting Markets, Simplifying Logistics
+            <h1 className="text-5xl max-w-lg font-semibold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#02446E] to-[#C570B8] mb-4">
+              Nous opérons dans tous les domaines
             </h1>
             <p className="text-lg text-gray-700 leading-relaxed max-w-md mb-4">
-              Unlock new opportunities with our reliable import and export
-              solutions. From logistics and compliance to seamless international
-              shipping.
+              vous bénéficiez d’une solution clé en main pour vos besoins en
+              import et export. Notre ambition est de bâtir un pont entre les
+              marchés, favorisant la croissance et le succès de nos clients à
+              travers le monde.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <div className="flex flex-col items-start gap-2 mt-4 max-w-[260px] xl:max-w-[200px] ">
+            <div className="flex flex-wrap  w-full ">
+              <div className="flex flex-col items-start gap-2 mt-4   ">
                 <Ship size={24} color="#C570B8" />
                 <div>
                   <p className="text-[#0E305D] font-semibold text-base sm:text-lg">
-                    Freight forwarding (air/sea/road)
+                    Produits alimentaires
                   </p>
-                  <p className="text-gray-700 max-w-[35ch]">
-                    We offer a wide range of services
+                  <p className="text-gray-700 text-sm max-w-xs">
+                    Importation et exportation de produits frais, surgelés et
+                    transformés.
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col items-start gap-2 mt-4 max-w-[260px] xl:max-w-[200px]">
+              <div className="flex flex-col items-start gap-2 mt-4 ">
                 <ArrowDownUpIcon size={24} color="#C570B8" />
                 <div>
                   <p className="text-[#0E305D] font-semibold text-base sm:text-lg">
-                    Supply chain management
+                    Produits spécifiques
                   </p>
-                  <p className="text-gray-700 max-w-sm">
-                    We offer a wide range of services
+                  <p className="text-gray-700 text-sm max-w-xs">
+                    Matières premières, produits chimiques, équipements
+                    médicaux, etc.
                   </p>
                 </div>
               </div>
@@ -316,7 +389,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="w-full bg-[#012237] py-16 flex justify-center items-center mb-16 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-6  text-white max-w-6xl w-full">
           {/* Card 1 */}
@@ -324,69 +397,79 @@ export default function Home() {
             <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-b from-purple-500 to-pink-500 rounded-full mb-4">
               <Folder className="text-white w-6 h-6" />
             </div>
-            <h3 className="text-3xl font-bold text-white">+578</h3>
-            <p className="text-sm text-gray-300">Projects done</p>
+            <h3 className="text-3xl font-bold text-white">Qualité </h3>
+            <p className="text-sm text-center text-gray-200">
+              Nous garantissons des produits conformes aux normes
+              internationales.
+            </p>
           </div>
           {/* Card 2 */}
           <div className="flex flex-col items-center p-4 bg-white/10 rounded-md shadow-md">
             <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-b from-purple-500 to-pink-500 rounded-full mb-4">
               <Users className="text-white w-6 h-6" />
             </div>
-            <h3 className="text-3xl font-bold text-white">+67</h3>
-            <p className="text-sm text-gray-300">Members</p>
+            <h3 className="text-3xl font-bold text-white">Fiabilité </h3>
+            <p className="text-sm text-center text-gray-200">
+              Respect des délais et des engagements pris envers nos partenaires.
+            </p>
           </div>
           {/* Card 3 */}
           <div className="flex flex-col items-center p-4 bg-white/10 rounded-md shadow-md">
             <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-b from-purple-500 to-pink-500 rounded-full mb-4">
               <User className="text-white w-6 h-6" />
             </div>
-            <h3 className="text-3xl font-bold text-white">+378</h3>
-            <p className="text-sm text-gray-300">Clients</p>
+            <h3 className="text-3xl font-bold text-white">Flexibilité </h3>
+            <p className="text-sm text-gray-200 text-center">
+              Solutions adaptées à chaque client et projet.
+            </p>
           </div>
           {/* Card 4 */}
           <div className="flex flex-col  items-center p-4 bg-white/10 rounded-md shadow-md">
             <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-b from-purple-500 to-pink-500 rounded-full mb-4">
               <Container className="text-white w-6 h-6" />
             </div>
-            <h3 className="text-3xl font-bold text-white">+10</h3>
-            <p className="text-sm text-gray-300">Years of experience</p>
+            <h3 className="text-3xl font-bold text-white">Innovation </h3>
+            <p className="text-sm text-gray-200 text-center">
+              Intégration de la technologie pour un commerce fluide et efficace
+            </p>
           </div>
         </div>
       </section>
       <section className="w-[90%] lg:w-[80%] m-auto my-16">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           <div className="flex flex-col items-start w-full  md:w-1/2 ">
-            <h4 className="text-lg font-light text-[#C570B8]">Expertise</h4>
-            <h1 className="text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#02446E] to-[#C570B8] mb-4">
-              We operate in multiple channels
+            <h4 className="text-lg font-light text-[#C570B8]">Maitrise</h4>
+            <h1 className="text-5xl max-w-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#02446E] to-[#C570B8] mb-4">
+              Pourquoi choisir Skyflow ?
             </h1>
             <p className="text-lg text-gray-700 leading-relaxed max-w-lg">
-              Unlock new opportunities with our reliable import and export
-              solutions. From logistics and compliance to seamless international
-              shipping.
+              Avec Sky flow, vous bénéficiez d’une solution clé en main pour vos
+              besoins en import et export. Notre ambition est de bâtir un pont
+              entre les marchés, favorisant la croissance et le succès de nos
+              clients à travers le monde.
             </p>
             <div>
               <div className="flex items-start gap-2 mt-4">
                 <Globe2Icon size={24} color="#48169C" />
                 <div className="flex flex-col">
-                  <p className="text-[#0E305D] font-semibold text-base sm:text-lg">
-                    Global reach
+                  <p className="text-[#0E305D] font-semibold text-base max-w-xs  sm:text-lg">
+                    Un réseau mondial de partenaires fiables.
                   </p>
                   <p className="text-gray-700 max-w-sm">
-                    We offer a wide range of services to help you navigate the
-                    complexities of global trade.
+                    Un réseau international dédié à la confiance et à la
+                    collaboration.
                   </p>
                 </div>
               </div>
               <div className="flex items-start gap-2 mt-4">
                 <Zap size={24} color="#48169C" />
                 <div className="flex flex-col">
-                  <p className="text-[#0E305D] font-semibold text-base sm:text-lg">
-                    Rapid Service
+                  <p className="text-[#0E305D] font-semibold text-base max-w-xs sm:text-lg">
+                    Expertise dans la logistique et la gestion des douanes
                   </p>
                   <p className="text-gray-700 max-w-sm">
-                    We offer a wide range of services to help you navigate the
-                    complexities of global trade.
+                    Maîtrise de la logistique et de la gestion des procédures
+                    douanières.
                   </p>
                 </div>
               </div>
@@ -394,11 +477,11 @@ export default function Home() {
                 <Trophy size={24} color="#48169C" />
                 <div className="flex flex-col">
                   <p className="text-[#0E305D] font-semibold text-base sm:text-lg">
-                    Expert team
+                    service client disponible et réactif.
                   </p>
                   <p className="text-gray-700 max-w-sm">
-                    We offer a wide range of services to help you navigate the
-                    complexities of global trade.
+                    Un service client toujours disponible, réactif et à
+                    l&apos;écoute, offrant des réponses rapides
                   </p>
                 </div>
               </div>
@@ -424,9 +507,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mb-16">
+      {/* <section className="mb-16">
         <div className="flex flex-col items-center w-[90%] py-8 mx-auto ">
-          {/* <h4 className="text-[#02446E]  mb-2">Why choose us</h4> */}
           <h1 className="font-bold text-center text-3xl md:text-5xl text-[#333333] max-w-lg mb-4">
             Why choose us ?
           </h1>
@@ -445,10 +527,8 @@ export default function Home() {
               </p>
             </div>
             <div className="hidden lg:block">
-              {/* <Separator orientation="vertical" style={{ height: "160px" }} /> */}
             </div>
             <div className="block md:hidden text-center self-start">
-              {/* <Separator orientation="horizontal" style={{ width: "160px" }} /> */}
             </div>
             <div className="flex flex-col md:flex-row justify-center gap-8">
               <div className="flex flex-col items-start max-w-xs mx-auto  gap-2">
@@ -477,7 +557,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section id="contact" className=" relative w-full bg-gray-50 py-12">
         <div className="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-[#02446E] to-[#C570B8] opacity-10 rounded-lg z-0"></div>
         <div className="w-[90%] lg:w-[70%] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
@@ -485,9 +565,11 @@ export default function Home() {
 
           {/* Contact Info Section */}
           <div className="flex flex-col items-start w-full md:w-1/2 z-10">
-            <h4 className="text-lg font-light text-[#C570B8]">Contact us</h4>
+            <h4 className="text-lg font-light text-[#C570B8]">
+              Contactez-nous
+            </h4>
             <h1 className="text-3xl md:text-5xl font-semibold tracking-wider text-[#0E305D] mb-6">
-              We&apos;re open to talk
+              Discutez avec nous de vos projets dès aujourd’hui !
             </h1>
             <div>
               {/* Contact Items */}
