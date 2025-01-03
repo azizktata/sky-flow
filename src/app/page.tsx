@@ -24,7 +24,7 @@ export default function Home() {
       <section>
         <HomeCarousel />
       </section>
-      <section id="about" className="w-[90%] m-auto my-16">
+      <section id="qui-sommes-nous" className="w-[90%] m-auto my-16">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           <div className="flex flex-col items-start w-full   md:w-1/2 xl:pr-32">
             <h4 className="text-lg">
@@ -200,7 +200,7 @@ export default function Home() {
               Nous opérons dans tous les domaines
             </h1>
             <p className="text-lg text-gray-700 leading-relaxed max-w-md mb-4">
-              vous bénéficiez d’une solution clé en main pour vos besoins en
+              Vous bénéficiez d’une solution clé en main pour vos besoins en
               import et export. Notre ambition est de bâtir un pont entre les
               marchés, favorisant la croissance et le succès de nos clients à
               travers le monde.
@@ -391,14 +391,17 @@ export default function Home() {
         </div>
       </section> */}
       <section className="w-full bg-[#012237] py-16 flex justify-center items-center mb-16 px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-6  text-white max-w-6xl w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-6  text-white w-[90%] ">
+          <h1 className="col-span-full text-center text-5xl font-bold mb-4">
+            Nos valeurs
+          </h1>
           {/* Card 1 */}
           <div className="flex flex-col items-center p-4 bg-white/10 rounded-md shadow-md">
             <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-b from-purple-500 to-pink-500 rounded-full mb-4">
               <Folder className="text-white w-6 h-6" />
             </div>
-            <h3 className="text-3xl font-bold text-white">Qualité </h3>
-            <p className="text-sm text-center text-gray-200">
+            <h3 className="text-3xl font-bold text-white mb-2">Qualité </h3>
+            <p className="text-md max-w-xs text-center text-gray-200">
               Nous garantissons des produits conformes aux normes
               internationales.
             </p>
@@ -408,8 +411,8 @@ export default function Home() {
             <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-b from-purple-500 to-pink-500 rounded-full mb-4">
               <Users className="text-white w-6 h-6" />
             </div>
-            <h3 className="text-3xl font-bold text-white">Fiabilité </h3>
-            <p className="text-sm text-center text-gray-200">
+            <h3 className="text-3xl font-bold text-white mb-2">Fiabilité </h3>
+            <p className="text-md max-w-xs  text-center text-gray-200">
               Respect des délais et des engagements pris envers nos partenaires.
             </p>
           </div>
@@ -418,8 +421,8 @@ export default function Home() {
             <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-b from-purple-500 to-pink-500 rounded-full mb-4">
               <User className="text-white w-6 h-6" />
             </div>
-            <h3 className="text-3xl font-bold text-white">Flexibilité </h3>
-            <p className="text-sm text-gray-200 text-center">
+            <h3 className="text-3xl font-bold text-white mb-2">Flexibilité </h3>
+            <p className="text-md max-w-xs  text-gray-200 text-center">
               Solutions adaptées à chaque client et projet.
             </p>
           </div>
@@ -428,8 +431,8 @@ export default function Home() {
             <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-b from-purple-500 to-pink-500 rounded-full mb-4">
               <Container className="text-white w-6 h-6" />
             </div>
-            <h3 className="text-3xl font-bold text-white">Innovation </h3>
-            <p className="text-sm text-gray-200 text-center">
+            <h3 className="text-3xl font-bold text-white mb-2">Innovation </h3>
+            <p className="text-md max-w-xs  text-gray-200 text-center">
               Intégration de la technologie pour un commerce fluide et efficace
             </p>
           </div>
@@ -438,7 +441,7 @@ export default function Home() {
       <section className="w-[90%] lg:w-[80%] m-auto my-16">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           <div className="flex flex-col items-start w-full  md:w-1/2 ">
-            <h4 className="text-lg font-light text-[#C570B8]">Maitrise</h4>
+            <h4 className="text-lg font-light text-[#C570B8]">Maîtrise </h4>
             <h1 className="text-5xl max-w-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#02446E] to-[#C570B8] mb-4">
               Pourquoi choisir Skyflow ?
             </h1>
@@ -477,7 +480,7 @@ export default function Home() {
                 <Trophy size={24} color="#48169C" />
                 <div className="flex flex-col">
                   <p className="text-[#0E305D] font-semibold text-base sm:text-lg">
-                    service client disponible et réactif.
+                    Un service client disponible et réactif.
                   </p>
                   <p className="text-gray-700 max-w-sm">
                     Un service client toujours disponible, réactif et à
@@ -558,7 +561,10 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-      <section id="contact" className=" relative w-full bg-gray-50 py-12">
+      <section
+        id="contactez-nous"
+        className=" relative w-full bg-gray-50 py-12"
+      >
         <div className="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-[#02446E] to-[#C570B8] opacity-10 rounded-lg z-0"></div>
         <div className="w-[90%] lg:w-[70%] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Gradient Background */}
@@ -576,19 +582,19 @@ export default function Home() {
               <div className="flex items-center gap-4 mb-4">
                 <Mail size={24} color="#48169C" />
                 <p className="text-[#0E305D] font-semibold text-base sm:text-lg">
-                  contact@gmail.com
+                  skyflow.tn@gmail.com
                 </p>
               </div>
               <div className="flex items-center gap-4 mb-4">
                 <MapPin size={24} color="#48169C" />
                 <p className="text-[#0E305D] font-semibold text-base sm:text-lg">
-                  Tunis, Ben Arous
+                  Route gremda km 9 Sfax
                 </p>
               </div>
               <div className="flex items-center gap-4 mb-4">
                 <Phone size={24} color="#48169C" />
                 <p className="text-[#0E305D] font-semibold text-base sm:text-lg">
-                  +216 53 488 169
+                  +216 98 761 680
                 </p>
               </div>
             </div>

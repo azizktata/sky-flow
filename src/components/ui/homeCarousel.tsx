@@ -27,7 +27,7 @@ export default function HomeCarousel() {
       <CarouselContent className="">
         {images.map((img, index) => (
           <CarouselItem className="" key={index}>
-            <Card radius="none" className="h-[550px] ">
+            <Card radius="none" className="h-[650px] ">
               <div className="relative w-full h-full overflow-hidden bg-gray-100">
                 <Image
                   removeWrapper
@@ -42,8 +42,8 @@ export default function HomeCarousel() {
               </div>
               <CardBody className="absolute inset-0 mb-16 ml-4 lg:ml-14 z-10 flex items-start justify-center">
                 <div className="mt-12 flex flex-col items-start w-auto mb-6">
-                  <h1 className="mb-6 max-w-md xl:max-w-2xl font-bold text-4xl sm:text-4xl xl:text-5xl text-white leading-snug tracking-wider">
-                    connecter les marchés internationaux
+                  <h1 className="mb-6 max-w-md xl:max-w-3xl font-bold text-4xl sm:text-4xl xl:text-6xl text-white leading-snug tracking-wider">
+                    Connecter les marchés internationaux
                   </h1>
                   <p className="text-base lg:text-lg text-gray-100 font-light mb-4 max-w-xs sm:max-w-lg leading-relaxed tracking-wide">
                     Nous proposons des services d&apos;

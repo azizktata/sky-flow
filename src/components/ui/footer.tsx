@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -10,7 +10,11 @@ export default function Footer() {
         {/* About Section */}
         <div>
           <h4 className="text-lg font-bold mb-4">SkyFlow</h4>
-          <p>your gateway way to global trade</p>
+          <p>
+            entreprise dynamique spécialisée dans l&apos;importation et
+            l&apos;exportation de produits et services divers à l’échelle
+            mondiale.
+          </p>
         </div>
 
         {/* Quick Links Section */}
@@ -19,15 +23,15 @@ export default function Footer() {
           <ul className="space-y-2">
             <li>
               <Link href="/" className="hover:underline hover:text-white/70">
-                Home
+                Accueil
               </Link>
             </li>
             <li>
               <Link
-                href="/#about"
+                href="/#qui-sommes-nous"
                 className="hover:underline hover:text-white/70"
               >
-                About us
+                Qui sommes-nous
               </Link>
             </li>
             <li>
@@ -40,10 +44,10 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="/#contact"
+                href="/#contactez-nous"
                 className="hover:underline hover:text-white/70"
               >
-                Contact us
+                Contactez-nous
               </Link>
             </li>
           </ul>
@@ -55,21 +59,21 @@ export default function Footer() {
           <ul className="space-y-2">
             <li className="flex items-center gap-2">
               <MapPin size={16} />
-              <span>Avenue Habib Bourguiba, Tunis, Tunisie</span>
+              <span>Rte Gremda Km9 Sfax</span>
             </li>
             <li className="flex items-center gap-2">
               <Phone size={16} />
-              <span>+216 71 352 114</span>
+              <span>+216 98 761 680</span>
             </li>
             <li className="flex items-center gap-2">
               <Mail size={16} />
-              <span>contact@skyflow.com</span>
+              <span>skyflow.tn@gmail.com</span>
             </li>
           </ul>
         </div>
 
         {/* Social Media Links */}
-        <div>
+        {/* <div>
           <h4 className="text-lg font-bold mb-4">Suivez-nous</h4>
           <div className="flex space-x-4">
             <Link
@@ -87,7 +91,7 @@ export default function Footer() {
               <Instagram size={24} />
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="mt-8 border-t text-gray-300 border-gray-700 pt-4 text-center">

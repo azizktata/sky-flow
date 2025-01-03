@@ -55,7 +55,7 @@ export default function Header() {
       <NavbarContent className="hidden sm:flex gap-16 text-lg" justify="center">
         <NavbarItem>
           <Link color="foreground" className="hover:text-gray-500" href="/">
-            Home
+            Accueil
           </Link>
         </NavbarItem>
 
@@ -69,13 +69,19 @@ export default function Header() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-base hover:text-gray-500" href="/#about">
-            About us
+          <Link
+            className="text-base hover:text-gray-500"
+            href="/#qui-sommes-nous"
+          >
+            Qui sommes-nous
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="text-base hover:text-gray-500" href="/#contact">
-            Contact us
+          <Link
+            className="text-base hover:text-gray-500"
+            href="/#contactez-nous"
+          >
+            Contactez-nous
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -88,7 +94,7 @@ export default function Header() {
             onPress={handleWhatsAppCall}
           >
             <Phone size={16} />
-            <span>+216 98 797 410</span>
+            <span>+216 98 761 680</span>
           </Button>
         </NavbarItem>
       </NavbarContent>
