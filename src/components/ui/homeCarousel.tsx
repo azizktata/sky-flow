@@ -12,11 +12,16 @@ import Autoplay from "embla-carousel-autoplay";
 import { Image } from "@nextui-org/image";
 
 import { Card, CardBody } from "@nextui-org/card";
-export default function HomeCarousel() {
+export default function HomeCarousel({
+  carousel,
+}: {
+  carousel: { title: string; description: string; images: string[] };
+}) {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 3000, stopOnInteraction: true })
   );
-  const images = ["/cover-1.jpg", "/cover-2.jpg", "/cover-3.jpg"];
+  // const images = ["/cover-1.jpg", "/cover-2.jpg", "/cover-3.jpg"];
+  const carouselImages = Object.values(carousel.images);
   return (
     <Carousel
       plugins={[plugin.current]}
@@ -25,7 +30,7 @@ export default function HomeCarousel() {
       onMouseLeave={plugin.current.reset}
     >
       <CarouselContent className="">
-        {images.map((img, index) => (
+        {carouselImages.map((img, index) => (
           <CarouselItem className="" key={index}>
             <Card radius="none" className="h-[650px] ">
               <div className="relative w-full h-full overflow-hidden bg-gray-100">
@@ -43,18 +48,10 @@ export default function HomeCarousel() {
               <CardBody className="absolute inset-0 mb-16 ml-4 lg:ml-14 z-10 flex items-start justify-center">
                 <div className="mt-12 flex flex-col items-start w-auto mb-6">
                   <h1 className="mb-6 max-w-md xl:max-w-3xl font-bold text-4xl sm:text-4xl xl:text-6xl text-white leading-snug tracking-wider">
-                    Connecter les marchés internationaux
+                    {carousel.title}
                   </h1>
                   <p className="text-base lg:text-lg text-gray-100 font-light mb-4 max-w-xs sm:max-w-lg leading-relaxed tracking-wide">
-                    Nous proposons des services d&apos;
-                    <span className="text-[#007BFF] font-medium">
-                      Importation
-                    </span>{" "}
-                    et d&apos;
-                    <span className="text-[#F15BB5] font-medium">
-                      Exportation
-                    </span>{" "}
-                    de produits variés, avec une portée mondiale.
+                    {carousel.description}
                   </p>
                 </div>
               </CardBody>

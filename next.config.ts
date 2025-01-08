@@ -1,7 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: `${process.env.HOSTNAME}`,
+      },
+      {
+        protocol: 'https',
+        hostname: `${process.env.HOSTNAME}`,
+        pathname: '/wp-content/uploads/**',
+      }
+    ]
+  }
 };
 
 export default nextConfig;

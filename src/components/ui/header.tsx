@@ -16,18 +16,26 @@ import { Phone } from "lucide-react";
 import { Image } from "@nextui-org/image";
 import Link from "next/link";
 
-export default function Header() {
+export default function Header({
+  logoUrl,
+  phone,
+  menuLinks,
+}: {
+  logoUrl: string;
+  phone: string;
+  menuLinks: { label: string; path: string }[];
+}) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [
-    { label: "Home", path: "/" },
-    { label: "About us", path: "/#about" },
-    { label: "Services", path: "/#services" },
-    { label: "Contact us", path: "/#contact" },
-  ];
+  // const menuItems = [
+  //   { label: "Home", path: "/" },
+  //   { label: "About us", path: "/#about" },
+  //   { label: "Services", path: "/#services" },
+  //   { label: "Contact us", path: "/#contactez-nous" },
+  // ];
   const handleWhatsAppCall = () => {
-    const phoneNumber = "21698797410";
-    const url = `https://wa.me/${phoneNumber}`;
+    // const phoneNumber = 21653488169;
+    const url = `https://wa.me/216${phone}`;
     window.open(url, "_blank");
   };
   const handleMenuItemClick = () => {
@@ -47,7 +55,14 @@ export default function Header() {
         />
         <NavbarBrand className="hidden sm:flex">
           <Link href={"/"} className="font-bold text-inherit">
-            <Image src="/logo-skyflow.png" alt="logo" width={50} height={50} />
+            <Image
+              src={
+                logoUrl && logoUrl.length > 0 ? logoUrl : "/logo-skyflow.png"
+              }
+              alt="logo"
+              width={50}
+              height={50}
+            />
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -94,12 +109,14 @@ export default function Header() {
             onPress={handleWhatsAppCall}
           >
             <Phone size={16} />
-            <span>+216 98 761 680</span>
+            <span>
+              +216 {phone.slice(0, 2)} {phone.slice(2, 5)} {phone.slice(5, 8)}
+            </span>
           </Button>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu className="flex flex-col  gap-8 pt-4">
-        {menuItems.map((item, index) => (
+        {menuLinks.map((item, index) => (
           <NavbarMenuItem
             onClick={handleMenuItemClick}
             key={`${item}-${index}`}
@@ -110,7 +127,7 @@ export default function Header() {
               color={
                 index === 2
                   ? "primary"
-                  : index === menuItems.length - 1
+                  : index === menuLinks.length - 1
                   ? "danger"
                   : "foreground"
               }

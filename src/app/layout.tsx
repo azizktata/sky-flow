@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/ui/header";
-import Footer from "@/components/ui/footer";
+
 import { Toaster } from "sonner";
 
 const archivo = Archivo({
@@ -24,9 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${archivo} antialiased`}>
         <Toaster position="top-right" />
-        <Header />
+
         {children}
-        <Footer />
       </body>
     </html>
   );

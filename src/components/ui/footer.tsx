@@ -2,26 +2,55 @@
 import React from "react";
 import Link from "next/link";
 import { MapPin, Phone, Mail } from "lucide-react";
+import Image from "next/image";
 
-export default function Footer() {
+export default function Footer({
+  logoUrl,
+  email,
+  address,
+  phone,
+  menuLinks,
+}: {
+  logoUrl: string;
+  email: string;
+  address: string;
+  phone: string;
+  menuLinks: { label: string; path: string }[];
+}) {
   return (
     <footer className="bg-[#1E1B4B]/90 text-white py-10">
       <div className="container w-[85%]  mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* About Section */}
         <div>
-          <h4 className="text-lg font-bold mb-4">SkyFlow</h4>
+          <Image
+            src={logoUrl && logoUrl.length > 0 ? logoUrl : "/logo-skyflow.png"}
+            alt="logo skyflow"
+            width={100}
+            height={100}
+          />
+        </div>
+        {/* <h4 className="text-lg font-bold mb-4">SkyFlow</h4>
           <p>
             entreprise dynamique spécialisée dans l&apos;importation et
             l&apos;exportation de produits et services divers à l’échelle
             mondiale.
-          </p>
-        </div>
+          </p> */}
 
         {/* Quick Links Section */}
         <div>
           <h4 className="text-lg font-bold mb-4">Liens Rapides</h4>
           <ul className="space-y-2">
-            <li>
+            {menuLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  href={link.path}
+                  className="hover:underline hover:text-white/70"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+            {/* <li>
               <Link href="/" className="hover:underline hover:text-white/70">
                 Accueil
               </Link>
@@ -49,7 +78,7 @@ export default function Footer() {
               >
                 Contactez-nous
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -59,15 +88,17 @@ export default function Footer() {
           <ul className="space-y-2">
             <li className="flex items-center gap-2">
               <MapPin size={16} />
-              <span>Rte Gremda Km9 Sfax</span>
+              <span>{address}</span>
             </li>
             <li className="flex items-center gap-2">
               <Phone size={16} />
-              <span>+216 98 761 680</span>
+              <span>
+                +216 {phone.slice(0, 2)} {phone.slice(3, 5)} {phone.slice(6, 9)}
+              </span>
             </li>
             <li className="flex items-center gap-2">
               <Mail size={16} />
-              <span>skyflow.tn@gmail.com</span>
+              <span>{email}</span>
             </li>
           </ul>
         </div>
