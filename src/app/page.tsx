@@ -75,6 +75,7 @@ export default async function Home() {
                 alt="hero"
                 fill
                 className="object-cover "
+                priority
               />
             </div>
           </div>
