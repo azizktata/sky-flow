@@ -29,7 +29,7 @@ export default function Home() {
           <div className="flex flex-col items-start w-full   md:w-1/2 xl:pr-32">
             <h4 className="text-lg">
               <span className="text-[#02446E]">Sky</span>
-              <span className="text-[#C570B8]"> Flow</span>
+              <span className="text-[#C570B8]">Flow</span>
             </h4>
             <h1 className="text-4xl sm:text-5xl max-w-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#02446E] to-[#C570B8] mb-4">
               Ouvrir des portes aux opportunités mondiales
@@ -71,7 +71,6 @@ export default function Home() {
               loading="eager"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-linear"></div>
-            {/* <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent"></div> */}
           </div>
           <CardBody className="absolute inset-0 mb-16  z-10 flex items-center justify-center">
             <div className="mt-12  flex flex-col items-center w-auto mb-6  ">
