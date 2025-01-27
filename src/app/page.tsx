@@ -49,7 +49,10 @@ export default async function Home() {
         <section>
           <HomeCarousel carousel={carouselSection} />
         </section>
-        <section id={"qui-sommes-nous"} className="w-[90%] m-auto my-16">
+        <section
+          id={"qui-sommes-nous"}
+          className="w-[90%] xl:w-[80%] m-auto my-16"
+        >
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="flex flex-col items-start w-full   md:w-1/2 xl:pr-32">
               <h4 className="text-lg">

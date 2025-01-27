@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: `${process.env.HOSTNAME}`,
-        pathname: '/wp-content/uploads/**',
+        // pathname: '/wp-content/uploads/**',
       }
     ]
   }
