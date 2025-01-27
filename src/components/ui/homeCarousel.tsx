@@ -45,12 +45,12 @@ export default function HomeCarousel({
                 <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-linear"></div>
                 {/* <div className="absolute inset-0 bg-gradient-to-l from-black/40 via-transparent to-transparent"></div> */}
               </div>
-              <CardBody className="absolute inset-0 mb-16 ml-4 lg:ml-14 z-10 flex items-start justify-center">
+              <CardBody className="absolute inset-0 mb-16 ml-4 xl:ml-24 lg:ml-14 z-10 flex items-start justify-center">
                 <div className="mt-12 flex flex-col items-start w-auto mb-6">
-                  <h1 className="mb-6 max-w-md xl:max-w-3xl font-bold text-4xl sm:text-4xl xl:text-6xl text-white leading-snug tracking-wider">
+                  <h1 className="mb-6 max-w-md xl:max-w-3xl font-bold text-4xl sm:text-4xl xl:text-6xl text-white leading-snug tracking-wider ">
                     {carousel.title}
                   </h1>
-                  <p className="text-base lg:text-lg text-gray-100 font-light mb-4 max-w-xs sm:max-w-lg leading-relaxed tracking-wide">
+                  <p className="text-base lg:text-lg text-gray-100 font-light mb-4 max-w-xs sm:max-w-lg leading-relaxed tracking-wide ">
                     {carousel.description}
                   </p>
                 </div>

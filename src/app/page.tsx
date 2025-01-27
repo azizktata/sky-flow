@@ -114,8 +114,8 @@ export default async function Home() {
           </Card>
         </section>
 
-        <section id="services" className="w-[90%]  m-auto mb-16">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-8 ">
+        <section id="services" className="w-[90%] xl:w-[75%]  mx-auto mb-16">
+          <div className="flex flex-col md:flex-row justify-center  gap-8 xl:gap-16 ">
             <div className="w-full md:w-1/2 flex gap-4">
               <div className="flex flex-col gap-4 w-1/2 ">
                 <div className="relative h-[250px] w-full">
@@ -154,7 +154,7 @@ export default async function Home() {
                 </div>
               </div>
             </div>
-            <div className="w-full   md:w-1/2 xl:pr-16 mb-8 md:mb-0 xl:mt-16">
+            <div className="w-full   md:w-1/2  mb-8 md:mb-0 xl:mt-16">
               <h4 className="text-lg font-light text-[#C570B8]">Services</h4>
               <h1 className="text-4xl sm:text-5xl max-w-lg font-semibold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-[#02446E] to-[#C570B8] mb-4">
                 {servicesSection.title}
@@ -245,9 +245,9 @@ export default async function Home() {
             </div>
           </div>
         </section>
-        <section className="w-[90%] lg:w-[80%]  m-auto my-16">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-4">
-            <div className="flex flex-col items-start w-full  md:w-1/2 ">
+        <section className="w-[90%] lg:w-[80%] xl:w-[75%]  m-auto my-16">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-4 ">
+            <div className="flex flex-col items-start w-full  md:w-1/2 mb-8 lg:mb-0">
               <h4 className="text-lg font-light text-[#C570B8]">Maîtrise </h4>
               <h1 className="text-5xl max-w-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#02446E] to-[#C570B8] mb-4">
                 {expertiseSection.title}
