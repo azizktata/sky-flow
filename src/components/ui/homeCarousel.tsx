@@ -22,7 +22,7 @@ export default function HomeCarousel({
   );
   const images = ["/cover-1.jpg", "/cover-2.jpg", "/cover-3.jpg"];
   const carouselImages = Object.values(carousel.images);
-  console.log(carouselImages);
+  // console.log(carouselImages);
   return (
     <Carousel
       plugins={[plugin.current]}
@@ -39,7 +39,7 @@ export default function HomeCarousel({
                   removeWrapper
                   alt="Card background"
                   className="z-0 w-full h-full object-cover"
-                  src={img || images[index]}
+                  src={img && img.length > 0 ? img : images[index]}
                   radius="none"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-linear"></div>
