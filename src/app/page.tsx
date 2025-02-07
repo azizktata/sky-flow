@@ -24,7 +24,7 @@ import Footer from "@/components/ui/footer";
 export default async function Home() {
   const pageContent = await fetchDataFromWP();
   // console.log(pageContent);
-  const logo_skyflow = pageContent[0]?.acf?.["logo_skyflow"];
+  // const logo_skyflow = pageContent[0]?.acf?.["logo_skyflow"];
   // const navMenuLinks = pageContent[0]?.acf?.["nav_menu_links"];
   // const menuLinks =
   //   navMenuLinks &&
@@ -43,7 +43,6 @@ export default async function Home() {
   return (
     <>
       <Header
-        logoUrl={logo_skyflow}
         phone={contactSection && contactSection.phone}
         // menuLinks={menuLinks}
       />
@@ -218,7 +217,7 @@ export default async function Home() {
                 <h3 className="text-3xl font-bold text-white mb-2">
                   {valeursSection.valeur1.title}{" "}
                 </h3>
-                <p className="text-md max-w-xs text-center text-gray-200">
+                <p className="text-sm leading-7 max-w-xs text-center text-gray-200">
                   {valeursSection.valeur1.description}
                 </p>
               </div>
@@ -230,7 +229,7 @@ export default async function Home() {
                 <h3 className="text-3xl font-bold text-white mb-2">
                   {valeursSection.valeur2.title}{" "}
                 </h3>
-                <p className="text-md max-w-xs  text-center text-gray-200">
+                <p className="text-sm leading-7 max-w-xs  text-center text-gray-200">
                   {valeursSection.valeur2.description}
                 </p>
               </div>
@@ -242,7 +241,7 @@ export default async function Home() {
                 <h3 className="text-3xl font-bold text-white mb-2">
                   {valeursSection.valeur3.title}{" "}
                 </h3>
-                <p className="text-md max-w-xs  text-gray-200 text-center">
+                <p className="text-sm leading-7 max-w-xs  text-gray-200 text-center">
                   {valeursSection.valeur3.description}
                 </p>
               </div>
@@ -254,7 +253,7 @@ export default async function Home() {
                 <h3 className="text-3xl font-bold text-white mb-2">
                   {valeursSection.valeur4.title}{" "}
                 </h3>
-                <p className="text-md max-w-xs  text-gray-200 text-center">
+                <p className="text-sm leading-7 max-w-xs  text-gray-200 text-center">
                   {valeursSection.valeur4.description}
                 </p>
               </div>

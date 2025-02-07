@@ -25,7 +25,7 @@ export default function Footer({
         {/* About Section */}
         <div>
           <Image
-            src={"/logo.webp"}
+            src={"/logo-rg.png"}
             alt="logo skyflow"
             width={100}
             height={100}

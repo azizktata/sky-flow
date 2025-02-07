@@ -16,13 +16,7 @@ import { Phone } from "lucide-react";
 import { Image } from "@nextui-org/image";
 import Link from "next/link";
 
-export default function Header({
-  logoUrl,
-  phone = "98761680",
-}: {
-  logoUrl: string;
-  phone: string;
-}) {
+export default function Header({ phone = "98761680" }: { phone: string }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
@@ -50,12 +44,12 @@ export default function Header({
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
+          className="md:hidden"
         />
-        <NavbarBrand className="hidden sm:flex">
+        <NavbarBrand className="hidden md:flex">
           <Link href={"/"} className="font-bold text-inherit">
             <Image
-              src={logoUrl ? logoUrl : "/logo-skyflow.webp"}
+              src={"/logo-skyflow.webp"}
               alt="logo"
               width={50}
               height={50}
@@ -64,7 +58,7 @@ export default function Header({
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-16 text-lg" justify="center">
+      <NavbarContent className="hidden md:flex gap-16 text-lg" justify="center">
         <NavbarItem>
           <Link color="foreground" className="hover:text-gray-500" href="/">
             Accueil
