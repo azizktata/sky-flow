@@ -1,7 +1,6 @@
 
-export async function GET(req){
-    const { searchParams } = new URL(req.url);
-    console.log(searchParams.get('id'))
+export async function GET(){
+
     try {
        
         const res = await fetch(`${process.env.BASE_URL}/skyflow`)
