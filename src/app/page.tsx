@@ -312,7 +312,7 @@ export default async function Home() {
               <div className="relative h-[550px] self-stretch w-full md:w-1/2 flex gap-4">
                 <div className="relative h-full w-full">
                   <Image
-                    src={expertiseSection.image1 || "/transport-2.jpg"}
+                    src={expertiseSection.image1 || "/transport-2.webp"}
                     alt="hero"
                     fill
                     className="object-cover rounded-lg"
@@ -320,7 +320,7 @@ export default async function Home() {
                 </div>
                 <div className="relative h-full w-full">
                   <Image
-                    src={expertiseSection.image2 || "/transport-3.jpg"}
+                    src={expertiseSection.image2 || "/transport-3.webp"}
                     alt="hero"
                     fill
                     className="object-cover rounded-lg"
@@ -384,7 +384,7 @@ export default async function Home() {
       </main>
       <Footer
         // menuLinks={menuLinks}
-        logoUrl={logo_skyflow}
+
         email={contactSection && contactSection.email}
         phone={contactSection && contactSection.phone}
         address={contactSection && contactSection.address}

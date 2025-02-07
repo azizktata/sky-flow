@@ -55,9 +55,7 @@ export default function Header({
         <NavbarBrand className="hidden sm:flex">
           <Link href={"/"} className="font-bold text-inherit">
             <Image
-              src={
-                logoUrl && logoUrl.length > 0 ? logoUrl : "/logo-skyflow.png"
-              }
+              src={logoUrl ? logoUrl : "/logo-skyflow.webp"}
               alt="logo"
               width={50}
               height={50}
