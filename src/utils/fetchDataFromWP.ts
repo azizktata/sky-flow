@@ -4,7 +4,7 @@ export  const fetchDataFromWP = async () => {
             throw new Error('BASE_URL not found in .env file');
         }
         // const res = await fetch(`${process.env.BASE_URL}`);
-        const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/proxy`);
+        const res = await fetch(`${process.env.BASE_URL}/skyflow`);
         if(res.status !== 200){
             throw new Error("Failed to fetch proxy data");
         }
