@@ -6,24 +6,28 @@ import Image from "next/image";
 
 export default function Footer({
   logoUrl,
-  email,
-  address,
-  phone,
-  menuLinks,
+  email = "contact@skyflows.com.tn",
+  address = "Route gremda km 9, Sfax, Tunisie",
+  phone = "98761680",
 }: {
   logoUrl: string;
   email: string;
   address: string;
   phone: string;
-  menuLinks: { label: string; path: string }[];
 }) {
+  const menuItems = [
+    { label: "Home", path: "/" },
+    { label: "About us", path: "/#about" },
+    { label: "Services", path: "/#services" },
+    { label: "Contact us", path: "/#contactez-nous" },
+  ];
   return (
     <footer className="bg-[#1E1B4B]/90 text-white py-10">
       <div className="container w-[85%]  mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* About Section */}
         <div>
           <Image
-            src={logoUrl && logoUrl.length > 0 ? logoUrl : "/logo-skyflow.png"}
+            src={logoUrl ? logoUrl : "/logo.png"}
             alt="logo skyflow"
             width={100}
             height={100}
@@ -40,7 +44,7 @@ export default function Footer({
         <div>
           <h4 className="text-lg font-bold mb-4">Liens Rapides</h4>
           <ul className="space-y-2">
-            {menuLinks.map((link, index) => (
+            {menuItems.map((link, index) => (
               <li key={index}>
                 <Link
                   href={link.path}

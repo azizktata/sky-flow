@@ -3,6 +3,7 @@
 import React from "react";
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -17,22 +18,28 @@ export default function HomeCarousel({
 }: {
   carousel: { title: string; description: string; images: string[] };
 }) {
-  const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true })
-  );
+  // const plugin = React.useRef(Autoplay({ delay: 3000 }));
   const images = ["/cover-1.jpg", "/cover-2.jpg", "/cover-3.jpg"];
   const carouselImages = Object.values(carousel.images);
-  // console.log(carouselImages);
+  const [api, setApi] = React.useState<CarouselApi>();
+
   return (
     <Carousel
-      plugins={[plugin.current]}
+      plugins={[Autoplay({ delay: 3000 })]}
       className="w-full  "
-      onMouseEnter={plugin.current.stop}
-      onMouseLeave={plugin.current.reset}
+      setApi={setApi}
+      opts={{
+        loop: true,
+      }}
     >
       <CarouselContent className="">
         {carouselImages.map((img, index) => (
-          <CarouselItem className="" key={index}>
+          <CarouselItem
+            onMouseEnter={() => api!.plugins().autoplay?.stop()}
+            onMouseLeave={() => api!.plugins().autoplay?.play()}
+            className=""
+            key={index}
+          >
             <Card radius="none" className="h-[650px] ">
               <div className="relative w-full h-full overflow-hidden bg-gray-100">
                 <Image

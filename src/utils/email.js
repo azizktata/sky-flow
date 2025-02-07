@@ -3,20 +3,18 @@
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
-    service: 'ssl0.ovh.net',
-    port: 993,
+  
+    host: 'ssl0.ovh.net',
+    port: 465 ,
     secure:true,
-    // ignoreTLS: true,
-    // tls: {
-    //     rejectUnauthorized: false // Ignore self-signed certificates (optional)
-    // },
+
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
     }
 }, {
-    debug: true, // Enable debugging
-    logger: true // Enable logging
+    // debug: true, // Enable debugging
+    // logger: true // Enable logging
 })
 
 export  const sendEmail = async ({text, sujet, email}) => {
@@ -28,7 +26,7 @@ export  const sendEmail = async ({text, sujet, email}) => {
     }
     const mailOptions = {
         from: email,
-        to: process.env.EMAIL_USER,
+        to: process.env.NEXT_PUBLIC_EMAIL_TO,
         subject: sujet,
         text: text
     };

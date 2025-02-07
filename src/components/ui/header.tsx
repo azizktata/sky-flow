@@ -18,21 +18,19 @@ import Link from "next/link";
 
 export default function Header({
   logoUrl,
-  phone,
-  menuLinks,
+  phone = "98761680",
 }: {
   logoUrl: string;
   phone: string;
-  menuLinks: { label: string; path: string }[];
 }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  // const menuItems = [
-  //   { label: "Home", path: "/" },
-  //   { label: "About us", path: "/#about" },
-  //   { label: "Services", path: "/#services" },
-  //   { label: "Contact us", path: "/#contactez-nous" },
-  // ];
+  const menuItems = [
+    { label: "Home", path: "/" },
+    { label: "About us", path: "/#about" },
+    { label: "Services", path: "/#services" },
+    { label: "Contact us", path: "/#contactez-nous" },
+  ];
   const handleWhatsAppCall = () => {
     // const phoneNumber = 21653488169;
     const url = `https://wa.me/216${phone}`;
@@ -45,8 +43,9 @@ export default function Header({
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
-      isBlurred
+      isBlurred={false}
       isBordered
+      className="bg-white shadow-md"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -115,8 +114,8 @@ export default function Header({
           </Button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="flex flex-col  gap-8 pt-4">
-        {menuLinks.map((item, index) => (
+      <NavbarMenu className="flex flex-col bg-white gap-8 pt-4">
+        {menuItems.map((item, index) => (
           <NavbarMenuItem
             onClick={handleMenuItemClick}
             key={`${item}-${index}`}
@@ -127,7 +126,7 @@ export default function Header({
               color={
                 index === 2
                   ? "primary"
-                  : index === menuLinks.length - 1
+                  : index === menuItems.length - 1
                   ? "danger"
                   : "foreground"
               }

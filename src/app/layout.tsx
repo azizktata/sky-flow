@@ -6,6 +6,7 @@ import { Toaster } from "sonner";
 
 const archivo = Archivo({
   variable: "--font-archivo",
+  weight: ["300", "400", "500", "600"],
   subsets: ["latin"],
 });
 
@@ -21,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${archivo} antialiased`}>
+      <body className={`${archivo.variable} antialiased`}>
         <Toaster position="top-right" />
 
         {children}
